@@ -1,0 +1,92 @@
+/* Основные стили */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff !important;
+}
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #555555 !important;
+    margin-right: 1rem;
+}
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Основной контент */
+main.container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+h1.display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #444444;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Карточки меню */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+.card-body {
+    padding: 1rem;
+}
+
+/* Секция преимуществ */
+.bg-light {
+    background-color: #fafafa !important;
+}
+.card.shadow-sm {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card.shadow-sm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Футер */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+}

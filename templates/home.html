@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Секция героя -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <h1 class="display-4 fw-bold">Добро пожаловать в XO-lounge!</h1>
+      <p class="lead">Погрузитесь в атмосферу праздника, насладитесь изысканными блюдами и великолепным караоке!</p>
+      <!-- Использование тега URL для генерации ссылки на меню -->
+      <a href="{% url 'menu_home' %}" class="btn btn-primary btn-lg">Перейти в меню</a>
+    </div>
+    <div class="col-lg-6">
+      <!-- Проверьте, что изображение находится по пути: C:\Diplromka\XO\static\images\hero-image.jpg -->
+      <img src="{% static 'images/hero-image.jpg' %}" class="img-fluid rounded" alt="XO-lounge">
+    </div>
+  </div>
+</div>
+
+<!-- Секция преимуществ -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Наши преимущества</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <!-- Использование Bootstrap Icons -->
+            <i class="bi bi-emoji-smile display-4 text-primary"></i>
+            <h5 class="card-title mt-3">Отличный сервис</h5>
+            <p class="card-text">Индивидуальный подход и забота о каждом госте.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-cup-straw display-4 text-primary"></i>
+            <h5 class="card-title mt-3">Разнообразие блюд</h5>
+            <p class="card-text">Широкий ассортимент блюд и напитков на любой вкус.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-music-note-beamed display-4 text-primary"></i>
+            <h5 class="card-title mt-3">Незабываемая атмосфера</h5>
+            <p class="card-text">Караоке, праздник и веселье для создания незабываемых моментов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция "О нас" -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">О нас</h2>
+    <p class="text-center">
+      XO-lounge – это место, где качество еды сочетается с атмосферой праздника.
+      Мы стремимся создавать уникальные моменты для каждого гостя, предлагая лучшие блюда,
+      отличный сервис и весёлую атмосферу. Приходите и убедитесь сами!
+    </p>
+  </div>
+</section>
+{% endblock %}

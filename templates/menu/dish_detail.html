@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            {% if dish.image %}
+                <img src="{{ dish.image.url }}" class="img-fluid rounded" alt="{{ dish.name }}">
+            {% else %}
+                <img src="{% static 'default_dish.jpg' %}" class="img-fluid rounded" alt="{{ dish.name }}">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h1>{{ dish.name }}</h1>
+            <p class="lead">{{ dish.description }}</p>
+            <p class="h4">Цена: {{ dish.price }} руб.</p>
+            {% if not dish.is_available %}
+                <span class="badge bg-danger">Нет в наличии</span>
+            {% else %}
+                <span class="badge bg-success">В наличии</span>
+            {% endif %}
+            <!-- Добавьте дополнительные элементы, например, кнопку "Добавить в заказ" -->
+            <a href="{% url 'menu_home' %}" class="btn btn-secondary mt-3">Вернуться к меню</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
